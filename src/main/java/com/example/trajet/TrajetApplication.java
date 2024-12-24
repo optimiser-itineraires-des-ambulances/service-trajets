@@ -12,4 +12,6 @@ public class TrajetApplication {
         SpringApplication.run(TrajetApplication.class, args);
     }
 
+
+
 }
