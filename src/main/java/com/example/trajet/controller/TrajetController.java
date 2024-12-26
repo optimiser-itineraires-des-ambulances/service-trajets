@@ -20,7 +20,7 @@ public class TrajetController {
     @Autowired
     private TrajetService trajetService;
 
-    
+
     @PostMapping("/add")
     public ResponseEntity<Trajet> createTrajet(@RequestBody Trajet trajet) {
 

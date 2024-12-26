@@ -73,7 +73,6 @@ public class TrajetService {
                 trajetWithDistance.put("distance", distance);
                 trajetWithDistance.put("pointDepart", trajet.getPointDepart());
                 trajetWithDistance.put("pointArrivee", trajet.getPointArrivee());
-                trajetWithDistance.put("hopital_id", trajet.getHopital_id());
                 trajetsWithDistances.add(trajetWithDistance);
             }
         }
