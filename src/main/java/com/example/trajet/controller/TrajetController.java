@@ -23,10 +23,10 @@ public class TrajetController {
     @Autowired
     private TrajetService trajetService;
 
-    @Autowired
-    private HopitalService hopitalService;
+    //@Autowired
+    //private HopitalService hopitalService;
 
-    @PostMapping("/add/{hopitalId}")
+    /*@PostMapping("/add/{hopitalId}")
     public ResponseEntity<Trajet> createTrajet(@PathVariable Long hopitalId,@RequestBody Trajet trajet) {
         Hopital hopital = hopitalService.getHopitalById(hopitalId);
         if (hopital == null) {
@@ -40,7 +40,7 @@ public class TrajetController {
         trajet.setHopital(hopital);
         Trajet savedTrajet = trajetRepository.save(trajet);
         return ResponseEntity.ok(savedTrajet);
-    }
+    }*/
 
     @GetMapping("/all")
     public List<Trajet> getAll(){
@@ -58,18 +58,12 @@ public class TrajetController {
         trajetService.deleteTrajet(id);
     }
 
-<<<<<<< HEAD
+
     @GetMapping("/withDistances")
     public List<Map<String, Object>> getTrajetsWithDistances() {
         return trajetService.getTrajetsWithDistances();
     }
-=======
-    /*@GetMapping("/top5Trajets")
-    public ResponseEntity<List<Trajet>> getTop5Trajets() {
-        return ResponseEntity.ok(trajetService.getTop5Trajets());
-    }*/
 
->>>>>>> 9bc50b271179b7bab72e1cf3f6104d84b7705e85
 }
 
 
