@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 
 @RestController
@@ -43,10 +44,10 @@ public class TrajetController {
         trajetService.deleteTrajet(id);
     }
 
-    /*@GetMapping("/top5Trajets")
-    public ResponseEntity<List<Trajet>> getTop5Trajets() {
-        return ResponseEntity.ok(trajetService.getTop5Trajets());
-    }*/
+    @GetMapping("/withDistances")
+    public List<Map<String, Object>> getTrajetsWithDistances() {
+        return trajetService.getTrajetsWithDistances();
+    }
 }
 
 
