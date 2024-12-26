@@ -1,8 +1,6 @@
 package com.example.trajet.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Transient;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,16 +24,10 @@ public class Trajet {
 
     private Map<String,Double> pointArrivee;
 
-    //private Long intervention_id;
-    @Column(name = "hopital_id", nullable = false)
-    private Long hopital_id;
 
-    /*@Transient
-    @ManyToOne
-    private Intervention intervention;
-*/
 
-    @Transient
-    @ManyToOne
-    private Hopital hopital;
+
+
+
+
 }
